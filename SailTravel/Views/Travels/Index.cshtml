@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BoatJourney.Models.Travel>
+
+@{
+    ViewBag.Title = "Travel overview";
+}
+
+<h2>Travel overview</h2>
+
+<p>
+    @Html.ActionLink("Create New Travel", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeTravel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TravelOrganiser.NameOrganiser)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.HiddenFor(modelItem => item.Id)
+            @Html.DisplayFor(modelItem => item.TypeTravel)
+        </td>
+        <!--<td>
+            @*@Html.HiddenFor(modelItem => item.Id)
+            @Html.DisplayFor(modelItem => item.VesselList)
+            @Html.DropDownListFor(modelItem => item.VesselList, new MultiSelectList(ViewBag.travelVessel, "Id", "NameOfVessel", item.VesselList))*@
+        </td>-->
+
+        <td>
+            @Html.HiddenFor(modelItem => item.TravelOrganiser.Id)
+            @Html.HiddenFor(modelItem => item.TravelOrganiserId)
+            @Html.DisplayFor(modelItem => item.TravelOrganiser.NameOrganiser)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
+            @*moet nog toegevoegd worden*@
+            @*Html.ActionLink("Vessel details", "VesselDetailPerTravel", new { id=item.Id})*@
+        </td>
+    </tr>
+}
+</table>
+

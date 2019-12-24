@@ -1,0 +1,57 @@
+﻿@model RelationsEF.Models.Persoon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persoon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+     
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeboorteDatum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeboorteDatum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres.Straat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres.Straat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres.Bus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres.Bus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres.Nummer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres.Nummer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

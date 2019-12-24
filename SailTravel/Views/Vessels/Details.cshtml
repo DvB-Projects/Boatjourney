@@ -1,0 +1,50 @@
+﻿@model BoatJourney.Models.Vessel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vessel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfVessel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfVessel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfVessel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfVessel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassangerCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassangerCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Travel.TypeTravel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Travel.TypeTravel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BoatJourney.Models.Vessel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+<table class="table" style="margin-bottom: 2%">
+    @Html.HiddenFor(modelItem => item.Id)
+    <tbody>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.TypeOfVessel)</th>
+            @Html.HiddenFor(modelItem => item.Id)
+            <td>@Html.DisplayFor(modelItem => item.TypeOfVessel)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NameOfVessel)</th>
+            <td>@Html.DisplayFor(modelItem => item.NameOfVessel)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.PassangerCapacity)</th>
+            <td>@Html.DisplayFor(modelItem => item.PassangerCapacity)</td>
+        </tr>
+
+        <tr>
+            @Html.HiddenFor(modelItem => item.Travel.Id)
+            <th>@Html.DisplayNameFor(model => model.Travel.TypeTravel)</th>
+            <td>@Html.DisplayFor(modelItem => item.Travel.TypeTravel)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Travel.VesselList)</th>
+            <td>@Html.DropDownListFor(modelItem => item.Travel.VesselList, new MultiSelectList(ViewBag.Vessels, "Id", "NameOfVessel"))</td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    </tbody>
+</table>
+}

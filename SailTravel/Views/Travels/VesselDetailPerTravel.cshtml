@@ -1,0 +1,78 @@
+﻿@model BoatJourney.Models.Travel
+
+@{
+    ViewBag.Title = "VesselDetailPerTravel";
+}
+
+<h2>Boot detail reis</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.HiddenFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.TypeTravel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeTravel)
+        </dd>
+        <!--<dt>
+            @*@Html.DisplayNameFor(model => model.VesselList)*@
+        </dt>-->
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelOrganiser.NameOrganiser)
+        </dt>
+        <dd>
+            @Html.HiddenFor(model => model.TravelOrganiserId)
+            @Html.HiddenFor(model => model.TravelOrganiser.Id)
+            @Html.DisplayFor(model => model.TravelOrganiser.NameOrganiser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <!--LIJST MET BOTEN MOET HIER AANGEMAAKT WORDEN-->
+        @for (int i = 0; i < Model.VesselList.Count; i++)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.VesselList[i].TypeOfVessel)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.VesselList[i].TypeOfVessel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VesselList[i].PassangerCapacity)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.VesselList[i].PassangerCapacity)
+            </dd>
+        }
+
+        <!--<dd>
+            @*@Html.DropDownListFor(model => model.VesselList, new MultiSelectList(ViewBag.Vessels, "Id", "NameOfVessel"))*@
+        </dd>-->
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,47 @@
+﻿@model BoatJourney.Models.Vessel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 style="margin-bottom: 2%">Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Aanmaak nieuwe booteigenschappen</legend>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div>
+            @Html.LabelFor(model => model.TypeOfVessel, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.TypeOfVessel, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TypeOfVessel, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(model => model.NameOfVessel, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.NameOfVessel, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NameOfVessel, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(model => model.PassangerCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.PassangerCapacity, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PassangerCapacity, "", new { @class = "text-danger" })
+        </div>
+    </fieldset>
+    <fieldset>
+        <div>
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </fieldset>
+}
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelationsEF", "RelationsEF\RelationsEF.csproj", "{250FA116-5744-454A-A112-BF2E1DCD2E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelationsEF.Tests", "RelationsEF.Tests\RelationsEF.Tests.csproj", "{C7075178-1EA8-4C9E-BC0E-08DCA3FD5F82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{250FA116-5744-454A-A112-BF2E1DCD2E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250FA116-5744-454A-A112-BF2E1DCD2E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250FA116-5744-454A-A112-BF2E1DCD2E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250FA116-5744-454A-A112-BF2E1DCD2E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7075178-1EA8-4C9E-BC0E-08DCA3FD5F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7075178-1EA8-4C9E-BC0E-08DCA3FD5F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7075178-1EA8-4C9E-BC0E-08DCA3FD5F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7075178-1EA8-4C9E-BC0E-08DCA3FD5F82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://asuske.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RelationsEF.Tests\\RelationsEF.Tests.csproj
+		SccProjectName1 = RelationsEF.Tests
+		SccLocalPath1 = RelationsEF.Tests
+		SccProjectUniqueName2 = RelationsEF\\RelationsEF.csproj
+		SccProjectName2 = RelationsEF
+		SccLocalPath2 = RelationsEF
+	EndGlobalSection
+EndGlobal

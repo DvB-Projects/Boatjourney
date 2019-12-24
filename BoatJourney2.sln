@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoatJourney", "SailTravel\BoatJourney.csproj", "{018572B6-77E2-4F86-882A-4B0201DAA344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{018572B6-77E2-4F86-882A-4B0201DAA344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018572B6-77E2-4F86-882A-4B0201DAA344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018572B6-77E2-4F86-882A-4B0201DAA344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018572B6-77E2-4F86-882A-4B0201DAA344}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76552614-15E7-4DAF-AE55-B5904F2381F8}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vbdennis-hotmail.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SailTravel\\BoatJourney.csproj
+		SccProjectName1 = SailTravel
+		SccLocalPath1 = SailTravel
+	EndGlobalSection
+EndGlobal
