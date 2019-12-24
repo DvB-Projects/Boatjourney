@@ -9,8 +9,7 @@ error when deleting a journey.
 
 
 To-do
-* have priority   
-
+---    
 * rework the Journey page, save the dates when editing a travel, allow them to choose an travelorganiser when creating a travel
 * rework the Boat page, remove the vessel list    
 * rework the adresses and zipcodes(merge)   
